@@ -1,6 +1,6 @@
 ## Description
 
-This is the prototype for thesis proposal.
+This is a prototype for thesis proposal.
 It streams Theta S video (works as a webcam) to the web (http server).
 
 ## Run
@@ -13,3 +13,24 @@ $ http-server
 ```
 
 access http://127.0.0.1:8080 on Chrome.
+
+## Resources
+
+* [OpenVR](https://github.com/ValveSoftware/openvr.git)
+* [OpenVR API Documentation](https://github.com/ValveSoftware/openvr/wiki/API-Documentation)
+* [OverLeaf](https://www.overleaf.com/8935687yqqmsddbyghx)
+* [Theta+SteamVR+Unity](http://lists.theta360.guide/t/tutorial-live-ricoh-theta-s-dual-fish-eye-for-steamvr-in-unity/938)
+
+## ToDos
+
+* On HTC Vive VR Device,
+    - Stream 360 Video taken by the Theta S
+    - Add functions to operate two controllers
+    - From the controllers, the system accepts coordinate info (2D..? 3D? Needs double check)
+    - Check ROS compatibility
+* Path planning
+    - Coordinate transformation (2D -> 3D): How can I get the depth info?
+    - Obstacle detection
+    - Create a suitable path based on the points (Currently, use Bezier Curve)
+* User Interface
+    - Feedback in VR Sys
