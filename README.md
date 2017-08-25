@@ -23,14 +23,20 @@ access http://127.0.0.1:8080 on Chrome.
 
 ## ToDos
 
-* On HTC Vive VR Device,
+* On VR Device,
     - Stream 360 Video taken by the Theta S
     - Add functions to operate two controllers
-    - From the controllers, the system accepts coordinate info (2D..? 3D? Needs double check)
+    - ~~From the controllers, the system accepts coordinate info (2D..? 3D? Needs double check)) ~~
     - Check ROS compatibility
 * Path planning
-    - Coordinate transformation (2D -> 3D): How can I get the depth info?
+    - ~~Coordinate transformation (2D -> 3D): How can I get the depth info?)~~
+    - Global path planning: Landmark based Pre-assigned spots. APs will be installed on the spots
+    - Use a directional antenna attached on the mobile robot
+    - Local path planning by AP control: Find a local path using AP signal strength
     - Obstacle detection
     - Create a suitable path based on the points (Currently, use Bezier Curve)
 * User Interface
     - Feedback in VR Sys
+    - Show a list of pre-assigned spots
+    - User can find a new path while exploring
+    - Show a global view on the display (Overview of the map + current position of the robot)
