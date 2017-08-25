@@ -26,7 +26,7 @@ access http://127.0.0.1:8080 on Chrome.
 * On VR Device,
     - Stream 360 Video taken by the Theta S
     - Add functions to operate two controllers
-    - ~~From the controllers, the system accepts coordinate info (2D..? 3D? Needs double check)) ~~
+    - ~~From the controllers, the system accepts coordinate info (2D..? 3D? Needs double check))~~
     - Check ROS compatibility
 * Path planning
     - ~~Coordinate transformation (2D -> 3D): How can I get the depth info?)~~
