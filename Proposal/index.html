@@ -1,0 +1,23 @@
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  <video id="video" autoplay loop style="display:none">
+    <!-- <source src="m20.MP4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> -->
+  </video>
+  <script src="three.min.js"></script> <!-- WebGL library -->
+  <script src="theta-view.js"></script> <!-- main interface source -->
+
+  <!-- ROS libraries -->
+  <script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+  <script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+  <script type="text/javascript" src="http://cdn.robotwebtools.org/ros3djs/current/ros3d.min.js"></script>
+
+  <!-- Open theta-view.js -->
+  <script>
+  window.addEventListener( 'DOMContentLoaded', theta_view('video'), false );
+  </script>
+
+</body>
+</html>
