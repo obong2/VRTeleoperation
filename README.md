@@ -16,6 +16,7 @@ access http://127.0.0.1:8080 on Chrome.
 
 ## Resources
 
+* [Theta S + Oculus + WebRTC/WebVR] (http://lists.theta360.guide/t/theta-s-webrtc-webgl-webvr-oculus/82)
 * [OpenVR](https://github.com/ValveSoftware/openvr.git)
 * [OpenVR API Documentation](https://github.com/ValveSoftware/openvr/wiki/API-Documentation)
 * [OverLeaf](https://www.overleaf.com/8935687yqqmsddbyghx)
