@@ -1,22 +1,31 @@
 ## Description
 
-This is a prototype for thesis proposal.
-It streams Theta S video (works as a webcam) to the web (http server).
+This repository include the source codes for AR Teleoperation Project.
+The purpose of this project is controlling a mobile robot using VR device, especially 'Oculus Rift'.
+You will need two computers (1: Connected to a mobile robot that will use ROS and run HTTP server, 2: Connected to Oculus). And the computers should be in the same network. The first computer (Computer 1) will stream 360 degree video that works as a webcam (Theta S).
 
 ## Run
-
-Use Node.js http-server
+Install required modules on Computer 1.
+You might need to include 'sudo' before the below commands.
+After cloning this project, browse to /Web folder and run these commands (start a web server).
 
 ```
 $ npm install http-server -g
 $ http-server
 ```
+If it makes 'command not found' error, run this command.
+Then, try to start a web server again
+```
+$ npm config set prefix /ser/local
+$ http-server
+```
 
-access http://127.0.0.1:8080 on Chrome.
+On Computer 2, 
+access http://IPaddress:8080 (e.g. http://192.168.1.4:8080) on your browser (firefox / chrominum).
 
 ## Resources
 
-* [Theta S + Oculus + WebRTC/WebVR] (http://lists.theta360.guide/t/theta-s-webrtc-webgl-webvr-oculus/82)
+* [Theta S + Oculus + WebRTC/WebVR](http://lists.theta360.guide/t/theta-s-webrtc-webgl-webvr-oculus/82)
 * [OpenVR](https://github.com/ValveSoftware/openvr.git)
 * [OpenVR API Documentation](https://github.com/ValveSoftware/openvr/wiki/API-Documentation)
 * [OverLeaf](https://www.overleaf.com/8935687yqqmsddbyghx)

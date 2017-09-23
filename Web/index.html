@@ -1,23 +1,125 @@
-<html>
-<head>
-  <meta charset="utf-8">
-</head>
-<body>
-  <video id="video" autoplay loop style="display:none">
-    <!-- <source src="m20.MP4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'> -->
-  </video>
-  <script src="libs/three.min.js"></script> <!-- WebGL library -->
-  <script src="theta-view.js"></script> <!-- main interface source -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Basic Three.js VR boilerplate</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				background-color: #000;
+				color: #fff;
+				margin: 0px;
+				padding: 0;
+				overflow: hidden;
+			}
+		</style>
+	</head>
 
-  <!-- ROS libraries -->
-  <script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
-  <script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
-  <script type="text/javascript" src="http://cdn.robotwebtools.org/ros3djs/current/ros3d.min.js"></script>
+	<body>
 
-  <!-- Open theta-view.js -->
-  <script>
-  window.addEventListener( 'DOMContentLoaded', theta_view('video'), false );
-  </script>
+	</body>
 
-</body>
+	<!--
+	three.js 3d library
+	-->
+	<script src="libs/three.min.js"></script>
+
+	<!--
+	VRControls.js acquires positional information from connected VR devices and applies the transformations to a three.js camera object.
+	 -->
+	<script src="libs/VRControls.js"></script>
+
+	<!--
+	VREffect.js handles stereo camera setup and rendering.
+	-->
+	<script src="libs/VREffect.js"></script>
+
+	<script>
+		/*
+		Setup three.js WebGL renderer
+		*/
+		var renderer = new THREE.WebGLRenderer( { antialias: true } );
+		/*
+		Append the canvas element created by the renderer to document body element.
+		*/
+		document.body.appendChild( renderer.domElement );
+		/*
+		Create a three.js scene
+		*/
+		var scene = new THREE.Scene();
+		/*
+		Create a three.js camera
+		*/
+		var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0, 100 );
+		/*
+		Apply VR headset orientation and positional to camera.
+		*/
+		var controls = new THREE.VRControls( camera );
+		/*
+		Apply VR stereo rendering to renderer
+		*/
+		var effect = new THREE.VREffect( renderer );
+		effect.setSize( window.innerWidth, window.innerHeight );
+		/*
+		Create 3d objects
+		*/
+		var geometry = new THREE.BoxGeometry( 0.1, 0.1, 0.1 );
+		var material = new THREE.MeshNormalMaterial();
+		var cube = new THREE.Mesh( geometry, material );
+		/*
+		Position cube mesh
+		*/
+		cube.position.z = -0.3;
+		/*
+		Add cube mesh to your three.js scene
+		*/
+		scene.add( cube );
+		/*
+		Request animation frame loop function
+		*/
+		function animate() {
+			/*
+			Apply rotation to cube mesh
+			*/
+			cube.rotation.y += 0.01;
+			/*
+			Update VR headset position and apply to camera.
+			*/
+			controls.update();
+			/*
+			Render the scene through the VREffect.
+			*/
+			effect.render( scene, camera );
+			requestAnimationFrame( animate );
+		}
+		/*
+		Kick off animation loop
+		*/
+		animate();
+		/*
+		Listen for double click event to enter full-screen VR mode
+		*/
+		document.body.addEventListener( 'dblclick', function() {
+			effect.setFullScreen( true );
+		});
+		/*
+		Listen for keyboard event and zero positional sensor on appropriate keypress.
+		*/
+		function onkey(event) {
+	    event.preventDefault();
+	    if (event.keyCode == 90) { // z
+	    	controls.zeroSensor();
+	    }
+	  };
+	  window.addEventListener("keydown", onkey, true);
+		/*
+		Handle window resizes
+		*/
+		function onWindowResize() {
+			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.updateProjectionMatrix();
+			effect.setSize( window.innerWidth, window.innerHeight );
+		}
+		window.addEventListener( 'resize', onWindowResize, false );
+	</script>
 </html>
