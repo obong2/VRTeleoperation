@@ -17,6 +17,7 @@
 </head>
 
 <body>
+	<video id="remoteVideo" autoplay></video>
 	<div id="container" style="position:absolute; top: 0px; left:0px; width:100%; "></div>
 	<div style="position:absolute; top:0px; left:4px; background-color: #fcfcfc; opacity: 0.9; padding: 2px;">
 		<button id='start_button' onclick="startViewer();">start</button>
@@ -41,14 +42,10 @@
 <script src="libs/VREffect.js"></script>
 <!--
 <script src="test.js"></script> -->
-<script src="libs/anzu.min.js"></script>
+<script src="libs/webrtc.js"></script>
 <script src="libs/theta_gl.js"></script>
 <script>
-	//var RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
-	//var RTCSessionDescription = window.RTCSessionDescription || window.mozRTCSessionDescription;
-	//var RTCIceCandidate = window.RTCIceCandidate || window.mozRTCIceCandidate;
-	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || window.navigator.mozGetUserMedia;
-	window.URL = window.URL || window.webkitURL;
+	
 	
 	var cameraStream = null;
 	var cameraURL = null;
