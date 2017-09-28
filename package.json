@@ -1,0 +1,15 @@
+{
+  "name": "yeonju",
+  "version": "1.0.0",
+  "description": "AR teleoperation project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.rcac.purdue.edu/oh132/ARTeleoperation.git"
+  },
+  "author": "Yeonju Oh",
+  "license": "ISC"
+}

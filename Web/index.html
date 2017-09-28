@@ -1,125 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Basic Three.js VR boilerplate</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<style>
-			body {
-				background-color: #000;
-				color: #fff;
-				margin: 0px;
-				padding: 0;
-				overflow: hidden;
-			}
-		</style>
-	</head>
 
-	<body>
+<head>
+	<title>Basic Three.js VR boilerplate</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<style>
+		body {
+			background-color: #000;
+			color: #fff;
+			margin: 0px;
+			padding: 0;
+			overflow: hidden;
+		}
+	</style>
+</head>
 
-	</body>
+<body>
+	<div id="container" style="position:absolute; top: 0px; left:0px; width:100%; "></div>
+	<div style="position:absolute; top:0px; left:4px; background-color: #fcfcfc; opacity: 0.9; padding: 2px;">
+		<button id='start_button' onclick="startViewer();">start</button>
+		<button id='stop_button' onclick="stopViewer();">stop</button>
+		<input type="checkbox" id="sense_orientation_check" _not_checked="checked" onclick="toggleSenseOrientation()">Sense Orientation</input>
+	</div>
+</body>
 
-	<!--
+<!--
 	three.js 3d library
 	-->
-	<script src="libs/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r73/three.min.js"></script> 
 
-	<!--
+<!--
 	VRControls.js acquires positional information from connected VR devices and applies the transformations to a three.js camera object.
 	 -->
-	<script src="libs/VRControls.js"></script>
+<script src="libs/VRControls.js"></script>
 
-	<!--
+<!--
 	VREffect.js handles stereo camera setup and rendering.
 	-->
-	<script src="libs/VREffect.js"></script>
+<script src="libs/VREffect.js"></script>
+<!--
+<script src="test.js"></script> -->
+<script src="libs/anzu.min.js"></script>
+<script src="libs/theta_gl.js"></script>
+<script>
+	//var RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+	//var RTCSessionDescription = window.RTCSessionDescription || window.mozRTCSessionDescription;
+	//var RTCIceCandidate = window.RTCIceCandidate || window.mozRTCIceCandidate;
+	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || window.navigator.mozGetUserMedia;
+	window.URL = window.URL || window.webkitURL;
+	
+	var cameraStream = null;
+	var cameraURL = null;
+	function startViewer() {
+		navigator.mediaDevices.getUserMedia({ video: true },
+			function (stream) {
+				cameraStream = stream;
+				cameraURL = window.URL.createObjectURL(stream);
+				THETA_GL.setVideoSrc(cameraURL);
+				THETA_GL.startAnimate();
+			},
+			function (err) {
+				console.error('getUserMedia Error:', err);
+			}
+		);
+	}
+	function stopViewer() {
+		THETA_GL.stopVideoSrc();
+		if (cameraURL) {
+			window.URL.revokeObjectURL(cameraURL);
+			cameraURL = null;
+		}
+		if (cameraStream) {
+			stopStream(cameraStream);
+			cameraStream = null;
+		}
+	}
+	function stopStream(stream) {
+		var tracks = stream.getTracks();
+		if (!tracks) {
+			console.warn('NO tracks');
+			return;
+		}
+		for (index in tracks) {
+			tracks[index].stop();
+		}
+	}
+	var senseOrientationCheckElement = document.getElementById('sense_orientation_check');
+	function isSenseOrientationChecked() {
+		if (!senseOrientationCheckElement) {
+			return false;
+		}
+		if (senseOrientationCheckElement.checked) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	function toggleSenseOrientation() {
+		var senseOrientation = isSenseOrientationChecked();
+		console.log('isSenseOrientationChecked() :' + senseOrientation);
+		THETA_GL.followOrientation(senseOrientation);
+	}
+	THETA_GL.init(/* divId */ 'container', /* autoResuze */ true,  /* debug */ false);
+</script>
 
-	<script>
-		/*
-		Setup three.js WebGL renderer
-		*/
-		var renderer = new THREE.WebGLRenderer( { antialias: true } );
-		/*
-		Append the canvas element created by the renderer to document body element.
-		*/
-		document.body.appendChild( renderer.domElement );
-		/*
-		Create a three.js scene
-		*/
-		var scene = new THREE.Scene();
-		/*
-		Create a three.js camera
-		*/
-		var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0, 100 );
-		/*
-		Apply VR headset orientation and positional to camera.
-		*/
-		var controls = new THREE.VRControls( camera );
-		/*
-		Apply VR stereo rendering to renderer
-		*/
-		var effect = new THREE.VREffect( renderer );
-		effect.setSize( window.innerWidth, window.innerHeight );
-		/*
-		Create 3d objects
-		*/
-		var geometry = new THREE.BoxGeometry( 0.1, 0.1, 0.1 );
-		var material = new THREE.MeshNormalMaterial();
-		var cube = new THREE.Mesh( geometry, material );
-		/*
-		Position cube mesh
-		*/
-		cube.position.z = -0.3;
-		/*
-		Add cube mesh to your three.js scene
-		*/
-		scene.add( cube );
-		/*
-		Request animation frame loop function
-		*/
-		function animate() {
-			/*
-			Apply rotation to cube mesh
-			*/
-			cube.rotation.y += 0.01;
-			/*
-			Update VR headset position and apply to camera.
-			*/
-			controls.update();
-			/*
-			Render the scene through the VREffect.
-			*/
-			effect.render( scene, camera );
-			requestAnimationFrame( animate );
-		}
-		/*
-		Kick off animation loop
-		*/
-		animate();
-		/*
-		Listen for double click event to enter full-screen VR mode
-		*/
-		document.body.addEventListener( 'dblclick', function() {
-			effect.setFullScreen( true );
-		});
-		/*
-		Listen for keyboard event and zero positional sensor on appropriate keypress.
-		*/
-		function onkey(event) {
-	    event.preventDefault();
-	    if (event.keyCode == 90) { // z
-	    	controls.zeroSensor();
-	    }
-	  };
-	  window.addEventListener("keydown", onkey, true);
-		/*
-		Handle window resizes
-		*/
-		function onWindowResize() {
-			camera.aspect = window.innerWidth / window.innerHeight;
-			camera.updateProjectionMatrix();
-			effect.setSize( window.innerWidth, window.innerHeight );
-		}
-		window.addEventListener( 'resize', onWindowResize, false );
-	</script>
 </html>
