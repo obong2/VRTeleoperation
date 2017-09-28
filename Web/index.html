@@ -53,7 +53,7 @@
 	var cameraStream = null;
 	var cameraURL = null;
 	function startViewer() {
-		navigator.mediaDevices.getUserMedia({ video: true },
+		navigator.getUserMedia({ video: true },
 			function (stream) {
 				cameraStream = stream;
 				cameraURL = window.URL.createObjectURL(stream);
