@@ -108,14 +108,14 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &24316891
+--- !u!1 &1052462035
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 149436, guid: dec55ce4bfd7b3e409158a1e6e15ec7b, type: 2}
   m_PrefabInternal: {fileID: 1508652442}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 24316892}
+  - component: {fileID: 1052462036}
   m_Layer: 0
   m_Name: ThetaSphere
   m_TagString: Untagged
@@ -123,12 +123,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &24316892
+--- !u!4 &1052462036
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 431660, guid: dec55ce4bfd7b3e409158a1e6e15ec7b, type: 2}
   m_PrefabInternal: {fileID: 1508652442}
-  m_GameObject: {fileID: 24316891}
+  m_GameObject: {fileID: 1052462035}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -183,7 +183,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dec55ce4bfd7b3e409158a1e6e15ec7b, type: 2}
-  m_RootGameObject: {fileID: 24316891}
+  m_RootGameObject: {fileID: 1052462035}
   m_IsPrefabParent: 0
 --- !u!1 &1508652443
 GameObject:
@@ -255,7 +255,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 24316892}
+  m_Father: {fileID: 1052462036}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1508652448
@@ -309,7 +309,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 24316892}
+  m_Father: {fileID: 1052462036}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1508652451
