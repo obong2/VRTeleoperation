@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C2DE6652-3FA2-964D-C681-0C3EDA9D81DB}</ProjectGuid>
+    <ProjectGuid>{6311E6C6-0A20-383B-320B-694068DE37A5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -81,6 +81,7 @@
      <None Include="Assets\AVProVideo\Demos\Materials\UI-DefaultFont-ExtraTexture.shader" />
      <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-VR-InsideSphere-AndroidOES.shader" />
      <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-VR-InsideSphere.shader" />
+     <None Include="Assets\Scripts\ROSBridgeLib\LICENSE.txt" />
      <None Include="Assets\Shaders\ThetaEquirectangular2.shader" />
      <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-Background-FullScreen.shader" />
      <None Include="Assets\AVProVideo\Resources\Shaders\AVProVideo-VR-InsideSphere-Transparent.shader" />
@@ -156,10 +157,13 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>D:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="websocket-sharp">
+ <HintPath>D:/duswn/Documents/GitHub/ARTeleoperation/Unity/Assets/Scripts/ROSBridgeLib/websocket-sharp.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{A0214A72-BF01-FFAC-04B1-8C7B319AEE8F}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{CD8C9303-404B-FB8D-6B9B-21988D5CAC0A}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
