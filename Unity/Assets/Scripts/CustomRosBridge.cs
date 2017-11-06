@@ -15,6 +15,10 @@ public class CustomRosBridge : MonoBehaviour {
         ros.AddSubscriber(typeof(RobotDataSubscriber));
         //Add publisher
         ros.AddPublisher(typeof(RobotDataPublisher));
+
+        //Add ServiceResponse
+        ros.AddServiceResponse(typeof(OculusServiceResponse));
+
         ros.Connect();
 	}
 	
@@ -36,6 +40,13 @@ public class CustomRosBridge : MonoBehaviour {
    
 }
 
+/*
+ * Message
+ * Header header
+ *  seq
+ *  timestamp?
+ * string[] points: Array of SSID
+ */
 public class RobotDataSubscriber : ROSBridgeSubscriber
 {
     public static string GetMessageTopic()
@@ -73,5 +84,15 @@ public class RobotDataPublisher : ROSBridgePublisher
     public static string ToYAMLString()
     {
         return null;
+    }
+}
+
+public class OculusServiceResponse {
+    public static void ServiceCallBack(string service, string response)
+    {
+        if (response == null)
+            Debug.Log("ServiceCallback for service " + service);
+        else
+            Debug.Log("ServiceCallback for service " + service + " response " + response);
     }
 }
