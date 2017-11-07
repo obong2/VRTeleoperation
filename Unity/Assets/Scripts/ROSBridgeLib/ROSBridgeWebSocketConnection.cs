@@ -248,7 +248,7 @@ using UnityEngine;
 		 			public void Publish(String topic, ROSBridgeMsg msg) {
 		 				if(_ws != null) {
 		 					string s = ROSBridgeMsg.Publish (topic, msg.ToYAMLString ());
-				//Debug.Log ("Sending " + s);
+				Debug.Log ("Sending " + s);
 		 					_ws.Send (s);
 		 				}
 		 			}

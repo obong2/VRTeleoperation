@@ -4,22 +4,27 @@ using UnityEngine;
 using ROSBridgeLib;
 using ROSBridgeLib.std_msgs;
 using SimpleJSON;
+using System;
 
 public class CustomRosBridge : MonoBehaviour {
     private ROSBridgeWebSocketConnection ros = null;
-
-	// Use this for initialization
-	void Start () {
-        ros = new ROSBridgeWebSocketConnection("ws://192.168.1.4", 1803);
+    private IEnumerator coroutine;
+    // Use this for initialization
+    void Start () {
+        ros = new ROSBridgeWebSocketConnection("ws://192.168.1.4", 9090);
         //Add subscriber
-        ros.AddSubscriber(typeof(RobotDataSubscriber));
+        //ros.AddSubscriber(typeof(RobotDataSubscriber));
         //Add publisher
         ros.AddPublisher(typeof(RobotDataPublisher));
 
         //Add ServiceResponse
-        ros.AddServiceResponse(typeof(OculusServiceResponse));
+        //ros.AddServiceResponse(typeof(OculusServiceResponse));
 
         ros.Connect();
+
+        coroutine = WaitAndPrint(4.0f);
+        StartCoroutine(coroutine);
+
 	}
 	
     void OnApplicationQuit()
@@ -30,12 +35,24 @@ public class CustomRosBridge : MonoBehaviour {
         }
     }
 
-	// Update is called once per frame
-	void Update () {
-        //PoseMsg msg;
-        //ros.Publish(RobotDataPublisher.GetMessageTopic(), msg);
-        ros.Render();
-	}
+    // Update is called once per frame
+    private IEnumerator WaitAndPrint(float waitTime) {
+
+        StringMsg msg = new StringMsg("\"Hello World\"");
+        string str;
+
+        while (true)
+        {
+            yield return new WaitForSeconds(waitTime);
+            ros.Publish(RobotDataPublisher.GetMessageTopic(), msg);
+            
+            str = UnityEngine.StackTraceUtility.ExtractStackTrace();
+            Debug.Log(str);
+            ros.Render();
+        }
+        
+        //Console.WriteLine(str);
+    }
 
    
 }
@@ -49,22 +66,22 @@ public class CustomRosBridge : MonoBehaviour {
  */
 public class RobotDataSubscriber : ROSBridgeSubscriber
 {
-    public static string GetMessageTopic()
+    public new string GetMessageTopic()
     {
         return null;
     }
 
-    public static string GetMessageType()
+    public new string GetMessageType()
     {
         return null;
     }
 
-    public static ROSBridgeMsg ParseMessage(JSONNode msg)
+    public new ROSBridgeMsg ParseMessage(JSONNode msg)
     {
         return null;
     }
 
-    public static void CallBack(ROSBridgeMsg msg)
+    public new void CallBack(ROSBridgeMsg msg)
     {
     }
 }
@@ -73,17 +90,22 @@ public class RobotDataPublisher : ROSBridgePublisher
 {
     public static string GetMessageTopic()
     {
-        return null;
+        return "/chatter";
     }
 
     public static string GetMessageType()
     {
-        return null;
+        return "std_msgs/String";
     }
 
-    public static string ToYAMLString()
+    public static string ToString(StringMsg msg)
     {
-        return null;
+        return msg.ToString();
+    }
+    public static string ToYAMLString(StringMsg msg)
+    {
+        Debug.Log(msg.ToYAMLString());
+        return msg.ToYAMLString();
     }
 }
 
