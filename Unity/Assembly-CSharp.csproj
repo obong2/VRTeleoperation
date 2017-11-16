@@ -92,6 +92,7 @@
      <Compile Include="Assets\AVProVideo\Scripts\Internal\WebGLMediaPlayer.cs" />
      <Compile Include="Assets\AVProVideo\Scripts\Internal\WindowsMediaPlayer.cs" />
      <Compile Include="Assets\Scripts\CustomRosBridge.cs" />
+     <Compile Include="Assets\Scripts\PathName.cs" />
      <Compile Include="Assets\Scripts\ROSBridgeLib\auv_msgs\DecimalLatLonMsg.cs" />
      <Compile Include="Assets\Scripts\ROSBridgeLib\auv_msgs\NavStsMsg.cs" />
      <Compile Include="Assets\Scripts\ROSBridgeLib\auv_msgs\NEDMsg.cs" />
