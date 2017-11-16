@@ -42,13 +42,13 @@ Basic structure is streamer(Robot)-watcher(VR).
 - [X] VLC: video streaming with a dual fish eye format
 - [X] Unity: Render a video on a Sphere obj
 - [ ] Unity: Remove tortions in the shader (Maya)
-- [ ] Unity: Connect with Rosbridge (COM1)
-- [ ] Unity: Send waypoints to COM1 with a format of service
+- [X] Unity: Connect with Rosbridge (COM1)
+- [X] Unity: Send waypoints to COM1 with ~~a format of service~~ a publisher
 - [ ] Unity: Create UI that shows accessible SSID
 - [X] ROS: Setup
-- [ ] ROS: Define topics to be published/subscribed
+- [X] ROS: Define topics to be published/subscribed
 - [ ] ROS: Modify ROSARIA source code if needed (possibly required for scanning wifi signals)
 - [ ] ROS: Path planning algorithm based on wifi fingerprinted data
 - [ ] Thesis: Update abstract, intro
-- [ ] Thesis: Remove deprecated sections (related work, methodology)
+- [X] Thesis: Remove deprecated sections (related work, methodology)
 - [ ] Thesis: Summarize experiments
