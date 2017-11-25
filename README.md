@@ -37,7 +37,6 @@ COM1 and COM2 communicate using rosbridge (COM1: [rosbridge](http://wiki.ros.org
 ## ToDos
 Basic structure is streamer(Robot)-watcher(VR).
 - [ ] Check if the public IP access is available in the school network (PAL3.0).
-
 - [X] VLC: ~~video streaming with a equirectangular format~~ (Not supported)
 - [X] VLC: video streaming with a dual fish eye format
 - [X] Unity: Render a video on a Sphere obj
@@ -47,8 +46,14 @@ Basic structure is streamer(Robot)-watcher(VR).
 - [ ] Unity: Create UI that shows accessible SSID
 - [X] ROS: Setup
 - [X] ROS: Define topics to be published/subscribed
-- [ ] ROS: Modify ROSARIA source code if needed (possibly required for scanning wifi signals)
-- [ ] ROS: Path planning algorithm based on wifi fingerprinted data
+- [ ] ROS: Add subscribes for plotting (pos)
+- [X] ROS: Modify ROSARIA source code if needed (possibly required for scanning wifi signals)
+    - [ ] Sonar sensor interpolation (waiting for testing...) + calculating DOA
+    - [X] Moving average
+    - [X] Statistical estimation
+- [X] ROS: Path planning algorithm based on the given way-points
 - [ ] Thesis: Update abstract, intro
 - [X] Thesis: Remove deprecated sections (related work, methodology)
+- [ ] Thesis: Add literature review about a directional antenna (vs omni)
+- [ ] Thesis: Methodology
 - [ ] Thesis: Summarize experiments
