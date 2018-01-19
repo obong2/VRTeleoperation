@@ -7,7 +7,15 @@ using SimpleJSON;
 using System;
 
 public class CustomRosBridge : MonoBehaviour {
+<<<<<<< HEAD
+    public static ROSBridgeWebSocketConnection ros = null;
+<<<<<<< HEAD
+	private const string HOST_IP = "10.186.105.144";
+=======
     private ROSBridgeWebSocketConnection ros = null;
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+>>>>>>> parent of ba59e88... removed unnecessary files
     private IEnumerator coroutine;
     // Use this for initialization
     void Start () {
@@ -16,7 +24,15 @@ public class CustomRosBridge : MonoBehaviour {
         //ros.AddSubscriber(typeof(RobotDataSubscriber));
         //Add publisher
         ros.AddPublisher(typeof(RobotDataPublisher));
+<<<<<<< HEAD
+		ros.AddPublisher(typeof(RobotVelPublisher));
+<<<<<<< HEAD
+		ros.AddPublisher (typeof(RobotMovingPublisher));
+=======
 
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+>>>>>>> parent of ba59e88... removed unnecessary files
         //Add ServiceResponse
         //ros.AddServiceResponse(typeof(OculusServiceResponse));
 
@@ -108,7 +124,15 @@ public class RobotDataPublisher : ROSBridgePublisher
         return msg.ToYAMLString();
     }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+/*
+=======
 
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+	
+>>>>>>> parent of ba59e88... removed unnecessary files
 public class OculusServiceResponse {
     public static void ServiceCallBack(string service, string response)
     {

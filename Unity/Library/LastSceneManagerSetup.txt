@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
+<<<<<<< HEAD
+- path: Assets/artelescene.unity
+=======
 - path: Assets/scene.unity
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+- path: Assets/VRTK/Examples/034_Controls_InteractingWithUnityUI.unity
+>>>>>>> parent of ba59e88... removed unnecessary files
   isLoaded: 1
   isActive: 1

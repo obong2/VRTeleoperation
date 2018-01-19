@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CustomRosBridge.cs">
+    <Files>
+      <File FileName="Assets\VRTK\Examples\ExampleResources\Scripts\UI_Interactions.cs" Line="32" Column="10" />
+      <File FileName="Assets\Scripts\CustomRosBridge.cs" Line="54" Column="9" />
+      <File FileName="Assets\Scripts\RobotVelPublisher.cs" Line="4" Column="20" />
+      <File FileName="Assets\Scripts\UIControl.cs" Line="23" Column="48" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

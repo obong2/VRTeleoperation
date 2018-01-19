@@ -20,7 +20,15 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
+<<<<<<< HEAD
+<<<<<<< HEAD
+  m_MinSize: {x: 950, y: 542}
+=======
   m_MinSize: {x: 950, y: 300}
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+  m_MinSize: {x: 950, y: 371}
+>>>>>>> parent of ba59e88... removed unnecessary files
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,10 +50,18 @@ MonoBehaviour:
     y: 30
     width: 1858
     height: 987
-  m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 681, y: 321}
+  m_MaxSize: {x: 12006, y: 8021}
   vertical: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+  controlID: 39
+=======
   controlID: 104
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+  controlID: 55
+>>>>>>> parent of ba59e88... removed unnecessary files
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -60,9 +76,21 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 1444
+    y: 0
+    width: 413
+=======
     x: 1481
     y: 0
     width: 377
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    x: 1319
+    y: 0
+    width: 538
+>>>>>>> parent of ba59e88... removed unnecessary files
     height: 987
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
@@ -88,10 +116,22 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    width: 399
+    height: 658
+=======
+    width: 395
+    height: 597
+>>>>>>> parent of ba59e88... removed unnecessary files
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+=======
     width: 366
     height: 597
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> parent of 2994eea... Update UI control on unity
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -112,17 +152,32 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    y: 658
+    width: 1444
+    height: 329
+=======
     y: 597
     width: 1481
     height: 390
+>>>>>>> parent of 2994eea... Update UI control on unity
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 14}
+=======
+    y: 597
+    width: 1319
+    height: 390
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 19}
+>>>>>>> parent of ba59e88... removed unnecessary files
   m_Panes:
   - {fileID: 14}
   - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -205,12 +260,28 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    width: 1444
+=======
     width: 1481
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    width: 1319
+>>>>>>> parent of ba59e88... removed unnecessary files
     height: 987
-  m_MinSize: {x: 406, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 404, y: 321}
+  m_MaxSize: {x: 8004, y: 8021}
   vertical: 1
+<<<<<<< HEAD
+<<<<<<< HEAD
+  controlID: 40
+=======
   controlID: 105
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+  controlID: 96
+>>>>>>> parent of ba59e88... removed unnecessary files
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -229,12 +300,30 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    width: 1444
+    height: 658
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
+  vertical: 0
+  controlID: 41
+=======
     width: 1481
     height: 597
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
   controlID: 106
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    width: 1319
+    height: 597
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
+  vertical: 0
+  controlID: 97
+>>>>>>> parent of ba59e88... removed unnecessary files
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,6 +338,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 399
+=======
+    x: 395
+>>>>>>> parent of ba59e88... removed unnecessary files
+    y: 0
+    width: 924
+    height: 597
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
+=======
     x: 366
     y: 0
     width: 1115
@@ -256,6 +358,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 18}
+>>>>>>> parent of 2994eea... Update UI control on unity
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
@@ -315,10 +418,24 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 436
+    y: 92
+    width: 1006
+    height: 637
+=======
     x: 368
     y: 92
     width: 1111
     height: 576
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    x: 397
+    y: 92
+    width: 920
+    height: 576
+>>>>>>> parent of ba59e88... removed unnecessary files
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -342,9 +459,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    y: 750
+    width: 1442
+    height: 308
+=======
     y: 689
     width: 1479
     height: 369
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    y: 689
+    width: 1317
+    height: 369
+>>>>>>> parent of ba59e88... removed unnecessary files
   m_SearchFilter:
     m_NameFilter: 
     m_ClassNames: []
@@ -357,19 +486,33 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Shaders
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Shaders
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\duswn\Documents\GitHub\ARTeleoperation\Unity
   m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
+<<<<<<< HEAD
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: ee2c0000
+    m_LastClickedID: 11502
+    m_ExpandedIDs: 00000000702a00009a2b0000ce2c00000a2d00002a2d0000002e0000382f0000482f0000ce2f000044300000ca30000000ca9a3bffffff7f
+=======
     scrollPos: {x: 0, y: 228}
     m_SelectedIDs: ea290000
     m_LastClickedID: 10730
     m_ExpandedIDs: 000000004c280000122a00002a2b0000462b0000522b000000ca9a3bffffff7f
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 302f0000
+    m_LastClickedID: 12080
+    m_ExpandedIDs: 000000006a2a0000942b0000c82c0000242d0000f82d0000302f0000402f0000c62f0000183000003c300000c230000000ca9a3bffffff7f
+>>>>>>> parent of ba59e88... removed unnecessary files
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -397,7 +540,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    m_ExpandedIDs: 00000000702a00009a2b0000ce2c00000a2d00002a2d0000002e0000382f0000482f0000ce2f000044300000ca300000
+=======
     m_ExpandedIDs: 000000004c280000122a00002a2b0000462b0000522b0000
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    m_ExpandedIDs: 000000006a2a0000942b0000c82c0000242d0000f82d0000302f0000402f0000c62f0000183000003c300000c2300000
+>>>>>>> parent of ba59e88... removed unnecessary files
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -422,8 +573,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 64330000
+    m_LastClickedInstanceID: 13156
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000b02a0000
     m_RenameOverlay:
@@ -474,9 +625,21 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 1446
+    y: 92
+    width: 411
+=======
     x: 1483
     y: 92
     width: 375
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    x: 1321
+    y: 92
+    width: 536
+>>>>>>> parent of ba59e88... removed unnecessary files
     height: 966
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
@@ -509,6 +672,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92
+<<<<<<< HEAD
+<<<<<<< HEAD
+    width: 397
+    height: 637
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 14fcffff0000000012350000
+=======
     width: 364
     height: 576
   m_TreeViewState:
@@ -516,6 +689,16 @@ MonoBehaviour:
     m_SelectedIDs: 642d0000
     m_LastClickedID: 11620
     m_ExpandedIDs: 18fcffff1afcffff00000000
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    width: 393
+    height: 576
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: c6340000
+    m_LastClickedID: 13510
+    m_ExpandedIDs: 14fcffff0000000064330000c6340000d2340000
+>>>>>>> parent of ba59e88... removed unnecessary files
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -534,7 +717,15 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
+<<<<<<< HEAD
+<<<<<<< HEAD
+  - artelescene
+=======
   - scene
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+  - 034_Controls_InteractingWithUnityUI
+>>>>>>> parent of ba59e88... removed unnecessary files
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -560,19 +751,48 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 401
+=======
+    x: 397
+>>>>>>> parent of ba59e88... removed unnecessary files
+    y: 92
+    width: 920
+    height: 576
+  m_SceneLighting: 1
+<<<<<<< HEAD
+  lastFramingTime: 4483.949752837961
+=======
     x: 368
     y: 92
     width: 1111
     height: 576
   m_SceneLighting: 1
   lastFramingTime: 1160.935814868866
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+  lastFramingTime: 62855.440649250835
+>>>>>>> parent of ba59e88... removed unnecessary files
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
+<<<<<<< HEAD
+    m_Target: {x: -2.4238029, y: 4.3769875, z: 0.29102868}
+    speed: 2
+    m_Value: {x: -2.4238029, y: 4.3769875, z: 0.29102868}
+=======
     m_Target: {x: 259.09906, y: -77.22247, z: 112.8067}
     speed: 2
     m_Value: {x: 259.09906, y: -77.22247, z: 112.8067}
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    m_Target: {x: -3.9848652, y: 2.2451563, z: -0.2526223}
+    speed: 2
+    m_Value: {x: -3.9848652, y: 2.2451563, z: -0.2526223}
+>>>>>>> parent of ba59e88... removed unnecessary files
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -595,6 +815,20 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
+<<<<<<< HEAD
+<<<<<<< HEAD
+    m_Target: {x: -0.020868244, y: 0.7247503, z: -0.02196917, w: -0.6883451}
+=======
+    m_Target: {x: 0.053964727, y: 0.74040884, z: 0.05987946, w: -0.66730595}
+>>>>>>> parent of ba59e88... removed unnecessary files
+    speed: 2
+    m_Value: {x: 0.05396472, y: 0.7404088, z: 0.059879452, w: -0.6673059}
+  m_Size:
+    m_Target: 4.98107
+    speed: 2
+<<<<<<< HEAD
+    m_Value: 71.66467
+=======
     m_Target: {x: -0.393877, y: 0.15733553, z: -0.06862878, w: -0.9029931}
     speed: 2
     m_Value: {x: -0.393877, y: 0.15733553, z: -0.06862878, w: -0.9029931}
@@ -602,6 +836,10 @@ MonoBehaviour:
     m_Target: 1157.2108
     speed: 2
     m_Value: 1157.2108
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    m_Value: 4.98107
+>>>>>>> parent of ba59e88... removed unnecessary files
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -634,10 +872,24 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 401
+    y: 92
+    width: 1041
+    height: 637
+=======
     x: 368
     y: 92
     width: 1111
     height: 576
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    x: 397
+    y: 92
+    width: 920
+    height: 576
+>>>>>>> parent of ba59e88... removed unnecessary files
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
@@ -646,10 +898,24 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    m_HBaseRangeMin: -520.5
+    m_HBaseRangeMax: 520.5
+    m_VBaseRangeMin: -310
+    m_VBaseRangeMax: 310
+=======
     m_HBaseRangeMin: -555.5
     m_HBaseRangeMax: 555.5
     m_VBaseRangeMin: -279.5
     m_VBaseRangeMax: 279.5
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    m_HBaseRangeMin: -460
+    m_HBaseRangeMax: 460
+    m_VBaseRangeMin: -279.5
+    m_VBaseRangeMax: 279.5
+>>>>>>> parent of ba59e88... removed unnecessary files
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -666,25 +932,61 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
+<<<<<<< HEAD
+      width: 1041
+      height: 620
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 520.5, y: 310}
+=======
       width: 1111
       height: 559
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 555.5, y: 279.5}
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+      width: 920
+      height: 559
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 460, y: 279.5}
+>>>>>>> parent of ba59e88... removed unnecessary files
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+      x: -520.5
+      y: -310
+      width: 1041
+      height: 620
+=======
       x: -555.5
       y: -279.5
       width: 1111
       height: 559
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+      x: -460
+      y: -279.5
+      width: 920
+      height: 559
+>>>>>>> parent of ba59e88... removed unnecessary files
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 1
+<<<<<<< HEAD
+<<<<<<< HEAD
+  m_LastWindowPixelSize: {x: 1041, y: 637}
+=======
   m_LastWindowPixelSize: {x: 1111, y: 576}
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+  m_LastWindowPixelSize: {x: 920, y: 576}
+>>>>>>> parent of ba59e88... removed unnecessary files
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -711,6 +1013,18 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    y: 750
+    width: 1442
+    height: 308
+=======
     y: 689
     width: 1479
     height: 369
+>>>>>>> parent of 2994eea... Update UI control on unity
+=======
+    y: 689
+    width: 1317
+    height: 369
+>>>>>>> parent of ba59e88... removed unnecessary files
