@@ -1,11 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CustomRosBridge.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UIControl.cs">
     <Files>
-      <File FileName="Assets\VRTK\Examples\ExampleResources\Scripts\UI_Interactions.cs" Line="32" Column="10" />
-      <File FileName="Assets\Scripts\CustomRosBridge.cs" Line="54" Column="9" />
-      <File FileName="Assets\Scripts\RobotVelPublisher.cs" Line="4" Column="20" />
-      <File FileName="Assets\Scripts\UIControl.cs" Line="23" Column="48" />
+      <File FileName="Assets\Scripts\CustomRosBridge.cs" Line="37" Column="37" />
+      <File FileName="Assets\Scripts\UIControl.cs" Line="16" Column="39" />
+      <File FileName="Assets\Scripts\RobotVelPublisher.cs" Line="2" Column="20" />
+      <File FileName="Assets\Scripts\RobotDataPublisher.cs" Line="1" Column="1" />
+      <File FileName="Assets\VRTK\Scripts\Internal\VRTK_Logger.cs" Line="1" Column="1" />
+      <File FileName="Assets\VRTK\Examples\ExampleResources\Scripts\SceneChanger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RobotMovingPublisher.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ROSBridgeLib\std_msgs\BoolMsg.cs" Line="27" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

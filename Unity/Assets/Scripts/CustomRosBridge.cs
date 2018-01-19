@@ -5,42 +5,37 @@ using ROSBridgeLib;
 using ROSBridgeLib.std_msgs;
 using SimpleJSON;
 using System;
+using VRTK;
 
 public class CustomRosBridge : MonoBehaviour {
-<<<<<<< HEAD
-    public static ROSBridgeWebSocketConnection ros = null;
-<<<<<<< HEAD
-	private const string HOST_IP = "10.186.105.144";
-=======
-    private ROSBridgeWebSocketConnection ros = null;
->>>>>>> parent of 2994eea... Update UI control on unity
-=======
->>>>>>> parent of ba59e88... removed unnecessary files
+    
+	public static ROSBridgeWebSocketConnection ros = null;
+	public static bool isMoving;
+
+	private const string HOST_IP = "10.186.111.40";
+
     private IEnumerator coroutine;
-    // Use this for initialization
+    
+	// Use this for initialization
     void Start () {
-        ros = new ROSBridgeWebSocketConnection("ws://192.168.1.4", 9090);
-        //Add subscriber
+		ros = new ROSBridgeWebSocketConnection("ws://" + HOST_IP, 9090);
+        
+		//Add subscriber
         //ros.AddSubscriber(typeof(RobotDataSubscriber));
+
         //Add publisher
         ros.AddPublisher(typeof(RobotDataPublisher));
-<<<<<<< HEAD
 		ros.AddPublisher(typeof(RobotVelPublisher));
-<<<<<<< HEAD
 		ros.AddPublisher (typeof(RobotMovingPublisher));
-=======
 
->>>>>>> parent of 2994eea... Update UI control on unity
-=======
->>>>>>> parent of ba59e88... removed unnecessary files
         //Add ServiceResponse
         //ros.AddServiceResponse(typeof(OculusServiceResponse));
+		isMoving = false;
 
         ros.Connect();
 
-        coroutine = WaitAndPrint(4.0f);
+        coroutine = WaitAndPrint(0.3f);
         StartCoroutine(coroutine);
-
 	}
 	
     void OnApplicationQuit()
@@ -51,94 +46,22 @@ public class CustomRosBridge : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
+    // Update is called once per 0.3 seconds
     private IEnumerator WaitAndPrint(float waitTime) {
 
-        StringMsg msg = new StringMsg("\"Hello World\"");
-        string str;
+        BoolMsg msg = new BoolMsg(true);
+        //string str;
 
         while (true)
         {
             yield return new WaitForSeconds(waitTime);
-            ros.Publish(RobotDataPublisher.GetMessageTopic(), msg);
+            ros.Publish(RobotMovingPublisher.GetMessageTopic(), msg);
             
-            str = UnityEngine.StackTraceUtility.ExtractStackTrace();
-            Debug.Log(str);
+            //str = UnityEngine.StackTraceUtility.ExtractStackTrace();
+            Debug.Log("hihi");
             ros.Render();
         }
-        
-        //Console.WriteLine(str);
     }
 
    
-}
-
-/*
- * Message
- * Header header
- *  seq
- *  timestamp?
- * string[] points: Array of SSID
- */
-public class RobotDataSubscriber : ROSBridgeSubscriber
-{
-    public new string GetMessageTopic()
-    {
-        return null;
-    }
-
-    public new string GetMessageType()
-    {
-        return null;
-    }
-
-    public new ROSBridgeMsg ParseMessage(JSONNode msg)
-    {
-        return null;
-    }
-
-    public new void CallBack(ROSBridgeMsg msg)
-    {
-    }
-}
-
-public class RobotDataPublisher : ROSBridgePublisher
-{
-    public static string GetMessageTopic()
-    {
-        return "/chatter";
-    }
-
-    public static string GetMessageType()
-    {
-        return "std_msgs/String";
-    }
-
-    public static string ToString(StringMsg msg)
-    {
-        return msg.ToString();
-    }
-    public static string ToYAMLString(StringMsg msg)
-    {
-        Debug.Log(msg.ToYAMLString());
-        return msg.ToYAMLString();
-    }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-/*
-=======
-
->>>>>>> parent of 2994eea... Update UI control on unity
-=======
-	
->>>>>>> parent of ba59e88... removed unnecessary files
-public class OculusServiceResponse {
-    public static void ServiceCallBack(string service, string response)
-    {
-        if (response == null)
-            Debug.Log("ServiceCallback for service " + service);
-        else
-            Debug.Log("ServiceCallback for service " + service + " response " + response);
-    }
 }
